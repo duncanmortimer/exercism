@@ -1,5 +1,3 @@
-from collections import Counter
-
 LETTER_SCORE = {
     letter: score
     for letters, score in [
@@ -15,7 +13,4 @@ LETTER_SCORE = {
 }
 
 def score(word):
-    return sum(
-        LETTER_SCORE[letter] * count
-        for letter, count in Counter(word.upper()).items()
-    )
+    return sum(LETTER_SCORE[letter] for letter in word.upper())
