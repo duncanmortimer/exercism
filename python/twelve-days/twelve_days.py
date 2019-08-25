@@ -1,6 +1,6 @@
 GIFTS = [
     "a Partridge in a Pear Tree.",
-    "two Turtle Doves, ",
+    "two Turtle Doves, and ",
     "three French Hens, ",
     "four Calling Birds, ",
     "five Gold Rings, ",
@@ -19,7 +19,7 @@ ORDINALS = [
 ]
 
 def gift_list(verse):
-    return ''.join(reversed(GIFTS[:1] + (["and "] if verse > 1 else []) + GIFTS[1:verse]))
+    return ''.join(reversed(GIFTS[:verse]))
 
 def opening_line(verse):
     return f"On the {ORDINALS[verse - 1]} day of Christmas my true love gave to me:"
