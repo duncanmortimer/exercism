@@ -1,5 +1,5 @@
 parse_single_nucleotide(c::AbstractChar) = (
-  c in Set(['A', 'C', 'G', 'T']) 
+  c ∈ Set(['A', 'C', 'G', 'T']) 
   ? Dict(c => 1)
   : throw(DomainError(c))
 )
